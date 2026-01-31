@@ -4,16 +4,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Question 😅</title>
   <style>
-    body {
+   body {
   font-family: Arial, sans-serif;
   text-align: center;
   padding: 20px;
-     background-color: rgb(237, 180, 229) ;
+  background-color: rgb(237, 180, 229) ;
  background:
         linear-gradient(rgba(249, 183, 237, 0.78), rgba(255,255,255,0.78)),
-        url('Screenshot 2026-01-28 095625.png');
-}
-}
+        url('Screenshot 2026-01-28 095625.png');}
 
 h1, h2 {
   font-size: 2rem;
@@ -23,7 +21,14 @@ button {
   padding: 12px 25px;
   font-size: 1.2rem;
   margin: 15px 0;
-  border-radius: 10px;
+  border-radius: 30px;
+  animation: pulse 2s infinite;
+}
+ @keyframes pulse{
+      
+  0%{box-shadow:0 0 0 0 rgba(255,105,135,0.6);}
+  70%{box-shadow:0 0 0 12px rgba(255,105,135,0);}
+  100%{box-shadow:0 0 0 0 rgba(255,105,135,0);}
 }
 
 @media (max-width: 500px) {
@@ -31,19 +36,16 @@ button {
     font-size: 1.5rem;
   }
 
-  button {
-    width: 80%;
-    font-size: 1rem;
-    padding: 10px 0;
-  }
+
 }
 
 img {
   max-width: 90%;
   height: auto;
 }
-    .yes{ background:#ff8c00; color:white; }
-    .no{ background:#aaa; color:white; }
+  
+    .yes{ background:#f377ee; color:white; }
+    .no{ background:#f37de1; color:white; }
     .bandriya{
         width: 200px;
     }
@@ -61,10 +63,15 @@ img {
   <button class="no" onclick="location.href='no.html'">
     NO 🙈
   </button>
-
+<script>
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+      });
+    }, 1500); // thoda ruk ke, natural feel ke liye
+  });
+</script>
 </body>
 </html>
-
-
-
-
