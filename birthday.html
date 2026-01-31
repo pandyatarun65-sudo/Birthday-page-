@@ -131,11 +131,21 @@
     <a href="sorry.html"class="btn-link" target="_blank">click last time </a></div> 
   </div>
 
-  
+  <script>
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+      });
+    }, 1500); // thoda ruk ke, natural feel ke liye
+  });
+</script>
 
 </body>
 
 </html>
+
 
 
 
